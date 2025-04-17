@@ -62,18 +62,19 @@ jobs:
           sudo modprobe fuse
           sudo chmod 666 /dev/fuse
           sudo chown root:$USER /etc/fuse.conf
-          sudo apt-get install fuse3 libfuse-dev rpm pkg-config
-          go get github.com/divyam234/teldrive/config
-          go get github.com/divyam234/teldrive/internal/cache
-          go get github.com/divyam234/teldrive/internal/http_range
-          go get github.com/divyam234/teldrive/internal/md5
-          go get github.com/divyam234/teldrive/internal/reader
-          go get github.com/divyam234/teldrive/internal/tgc
-          go get github.com/divyam234/teldrive/internal/utils
-          go get github.com/divyam234/teldrive/pkg/mapper
-          go get github.com/divyam234/teldrive/pkg/models
-          go get github.com/divyam234/teldrive/pkg/schemas
-          go get github.com/divyam234/teldrive/pkg/types
+          sudo apt-get update
+          sudo apt-get install -y fuse3 libfuse-dev rpm pkg-config git-annex git-annex-remote-rclone nfs-common
+          go get github.com/tgdrive/teldrive/config
+          go get github.com/tgdrive/teldrive/internal/cache
+          go get github.com/tgdrive/teldrive/internal/http_range
+          go get github.com/tgdrive/teldrive/internal/md5
+          go get github.com/tgdrive/teldrive/internal/reader
+          go get github.com/tgdrive/teldrive/internal/tgc
+          go get github.com/tgdrive/teldrive/internal/utils
+          go get github.com/tgdrive/teldrive/pkg/mapper
+          go get github.com/tgdrive/teldrive/pkg/models
+          go get github.com/tgdrive/teldrive/pkg/schemas
+          go get github.com/tgdrive/teldrive/pkg/types
           go mod download github.com/gin-gonic/gin
           go get github.com/gotd/td/tg
           go get github.com/jackc/pgx/v5/pgconn
@@ -97,17 +98,17 @@ jobs:
           }
           # Copy mingw32-make.exe to make.exe so the same command line
           # can be used on Windows as on macOS and Linux
-          go get github.com/divyam234/teldrive/config
-          go get github.com/divyam234/teldrive/internal/cache
-          go get github.com/divyam234/teldrive/internal/http_range
-          go get github.com/divyam234/teldrive/internal/md5
-          go get github.com/divyam234/teldrive/internal/reader
-          go get github.com/divyam234/teldrive/internal/tgc
-          go get github.com/divyam234/teldrive/internal/utils
-          go get github.com/divyam234/teldrive/pkg/mapper
-          go get github.com/divyam234/teldrive/pkg/models
-          go get github.com/divyam234/teldrive/pkg/schemas
-          go get github.com/divyam234/teldrive/pkg/types
+          go get github.com/tgdrive/teldrive/config
+          go get github.com/tgdrive/teldrive/internal/cache
+          go get github.com/tgdrive/teldrive/internal/http_range
+          go get github.com/tgdrive/teldrive/internal/md5
+          go get github.com/tgdrive/teldrive/internal/reader
+          go get github.com/tgdrive/teldrive/internal/tgc
+          go get github.com/tgdrive/teldrive/internal/utils
+          go get github.com/tgdrive/teldrive/pkg/mapper
+          go get github.com/tgdrive/teldrive/pkg/models
+          go get github.com/tgdrive/teldrive/pkg/schemas
+          go get github.com/tgdrive/teldrive/pkg/types
           go mod download github.com/gin-gonic/gin
           go get github.com/gotd/td/tg
           go get github.com/jackc/pgx/v5/pgconn
